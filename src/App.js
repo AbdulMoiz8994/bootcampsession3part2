@@ -1,23 +1,13 @@
-import logo from './logo.svg';
+import React ,{useState}from 'react'
 import './App.css';
 
 function App() {
+let [count,setCount]=useState(0) //0 Will be initial value of count
+//setCount to do the update to count value
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>We are doing Counting Variable= {count}</h1>
+      <button onClick={() => setCount(++count)}>Update Value</button>
     </div>
   );
 }
