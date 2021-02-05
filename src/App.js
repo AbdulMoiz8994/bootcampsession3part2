@@ -2,6 +2,7 @@ import React ,{useState}from 'react'
 import './App.css';
 //import Component
 import {Child} from './Child'
+import {Anotherfile} from './Anotherfile'
 
 function App() {
 let [count,setCount]=useState(0) //0 Will be initial value of count
@@ -15,6 +16,9 @@ let[isMorning, updateDay]=useState()
       {/* <h1>We are doing Counting Variable= {count}</h1> */}
       <button onClick={() => setCount(++count)}>Update Value</button>
       <button onClick={() => updateDay(!isMorning)}>Update Day</button>
+      <div>
+        <Anotherfile/>
+      </div>
     </div>
   );
 }
